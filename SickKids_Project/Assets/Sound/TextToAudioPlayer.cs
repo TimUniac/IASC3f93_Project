@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TextToAudioPlayer : MonoBehaviour
 {
-    public AudioClip[] audioClips;
-    public float playbackInterval = -0.2f; // Play with this till it sounds right. 
+    public AudioClip[] audioClips; // The syllables
+    public float playbackInterval = -0.2f; //adjust in editor to control rate of speech
     private AudioSource audioSource;
-    private Queue<AudioClip> playQueue = new Queue<AudioClip>(); 
+    private Queue<AudioClip> playQueue = new Queue<AudioClip>(); // syllable playlist
     
     void Start()
     {
@@ -24,8 +24,7 @@ public class TextToAudioPlayer : MonoBehaviour
         }
     }
 
-    public void ReadText(string text) // feed text using:  string text = "Hello, world!";
-                                      //                   textToAudioPlayer.ReadText(text);
+    public void ReadText(string text)
     {
         int charCount = text.Length;
         int clipsToPlayCount = Mathf.Max(1, Mathf.CeilToInt(charCount / 6.0f * 1.0f));
@@ -53,7 +52,7 @@ public class TextToAudioPlayer : MonoBehaviour
                     AudioClip clipToPlay = playQueue.Dequeue();
                     audioSource.clip = clipToPlay;
 
-                    audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f);//also play with this to fit desired effect
+                    audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f); // play with this to make more or less natural
 
                     audioSource.Play();
                     yield return new WaitForSeconds(playbackInterval);
