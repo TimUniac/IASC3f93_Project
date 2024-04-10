@@ -47,6 +47,6 @@ public class MainMenuManager : MonoBehaviour
     
     public void LoadWhiteboxScene()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Whitebox");
     }
 }

@@ -25,69 +25,6 @@ public class SaveSomethiing : MonoBehaviour
     }
     
 
-    public async void SaveData()
-    {
-        // Initialize playerData with default values only if it hasn't been initialized yet
-        if (playerData == null)
-        {
-            playerData = new Dictionary<string, object>
-            {
-                { "firstKeyName", "jose2" },
-                { "ThirdKey", 0 } // Assuming initial value is 0
-            };
-        }
-
-        // Now playerData is guaranteed to be initialized, proceed with checking and updating "ThirdKey"
-        if (playerData.ContainsKey("ThirdKey"))
-        {
-            // Retrieve the current value of "ThirdKey"
-            int currentValue = (int)playerData["ThirdKey"];
-
-            // Increment the value by 1
-            int newValue = currentValue + 1;
-
-            // Update the dictionary with the new value
-            playerData["ThirdKey"] = newValue;
-        }
-        else
-        {
-            // If "ThirdKey" does not exist, add it to the dictionary with a value of 1
-            playerData.Add("ThirdKey", 1);
-        }
-
-        // Proceed to save the updated player data
-        var result = await CloudSaveService.Instance.Data.Player.SaveAsync(playerData);
-        Debug.Log($"Saved data {string.Join(',', playerData)}");
-    }
-    
-    public async void IncrementAndSaveData()
-    {
-        // Check if "ThirdKey" exists in the playerData dictionary
-        if (playerData.ContainsKey("ThirdKey"))
-        {
-            // Ensure the value associated with "ThirdKey" is an integer
-            if (playerData["ThirdKey"] is int currentValue)
-            {
-                // Increment the value by 1
-                playerData["ThirdKey"] = currentValue + 1;
-            }
-            else
-            {
-                // Handle the case where the value is not an integer, if necessary
-                Debug.LogError("The value of 'ThirdKey' is not an integer.");
-            }
-        }
-        else
-        {
-            // If "ThirdKey" does not exist, add it to the dictionary with a value of 1
-            playerData["ThirdKey"] = 1;
-        }
-
-        // Proceed to save the updated player data
-        var result = await CloudSaveService.Instance.Data.Player.SaveAsync(playerData);
-        Debug.Log($"Saved data {string.Join(',', playerData)}");
-    }
-
     public async void SignUpWithUsernamePassword()
     {
         string username = usernameInputField.text;
@@ -108,7 +45,8 @@ public class SaveSomethiing : MonoBehaviour
             {
                 { "username", username },
                 { "itemsFound", new List<string>() }, // Empty list for items found
-                { "questsCompleted", new List<string>() } // Empty list for quests completed
+                { "questsCompleted", new List<string>() }, // Empty list for quests completed
+                { "GuideIndex", 0 }
             };
 
             await CloudSaveService.Instance.Data.Player.SaveAsync(initialPlayerData);

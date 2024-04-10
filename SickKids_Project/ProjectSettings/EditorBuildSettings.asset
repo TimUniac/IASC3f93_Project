@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5287f0641411d184981d8495599b99a4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Whitebox.unity
     guid: d4b0336546c1dbe4dafb0646441d652e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 177f144a8b08caa4e9533948f41022b8
   m_configObjects: {}
