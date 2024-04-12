@@ -1,67 +1,72 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class TextToAudioPlayer : MonoBehaviour
-{
-    public AudioClip[] audioClips; // To hold all audio clips
-    public float playbackInterval = 0.2f; // Adjustable playback interval in seconds, should be positive
-    private AudioSource audioSource;
+{   [SerializeField]
+    public AudioClip[] audioClips; // Array to hold all audio clips
+    private AudioSource audioSource; // AudioSource component attached to the same GameObject
 
     void Start()
     {
-          audioSource = GetComponent<AudioSource>();
-    if (audioSource == null)
-    {
-        Debug.LogError("Missing AudioSource component on the GameObject.");
-        return; // Add return to prevent further execution if AudioSource is not found
-    }
-    LoadAudioClips();
+        // Get the AudioSource component from the GameObject this script is attached to
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("Missing AudioSource component on the GameObject.");
+            return; // If AudioSource is not found, log an error and stop further execution
+        }
+
+        // Load audio clips; assuming this method will properly populate the audioClips array
+        LoadAudioClips();
     }
 
- void LoadAudioClips()
-{
-    audioClips = new AudioClip[91]; // Adjust the number based on your actual clips
-    for (int i = 1; i <= 91; i++)
+    void LoadAudioClips()
     {
-        audioClips[i - 1] = Resources.Load<AudioClip>($"RoboSyllabs/RoboVoice_{i}");
-        if (audioClips[i - 1] == null)
-         {
-            Debug.LogError("Failed to load AudioClip at index " + (i-1));
+        audioClips = new AudioClip[83]; 
+        for (int i = 1; i <= 83; i++)
+        {
+            // Construct the path for each clip
+            string path = $"Audio/RoboVoice_{i}";
+            audioClips[i - 1] = Resources.Load<AudioClip>(path);
+            if (audioClips[i - 1] == null)
+            {
+                Debug.LogError($"Failed to load AudioClip at path: {path}");
+            }
         }
-        }// Assuming the clips are statically assigned via the Unity Editor or loaded once and reused
     }
 
     public void ReadText(string text)
     {
         int charCount = text.Length;
-        int clipsToPlayCount = Mathf.Max(1, Mathf.CeilToInt(charCount / 6.0f));
+        int clipsToPlayCount = Mathf.Max(1, Mathf.CeilToInt(charCount / 9.0f)); // Calculate how many clips to play
         StartCoroutine(PlayAudioClipsRandomly(clipsToPlayCount));
     }
 
     IEnumerator PlayAudioClipsRandomly(int count)
     {
         for (int i = 0; i < count; i++)
-    {
-        if (audioClips.Length == 0 || audioClips.Any(clip => clip == null))
         {
-            Debug.LogError("Audio clips array is empty or contains null entries.");
-            yield break; // Exit if there are invalid clips
+            if (audioClips.Length == 0)
+            {
+                Debug.LogError("Audio clips array is empty.");
+                yield break; // Exit if no clips are loaded
+            }
+
+            // Select a random clip to play
+            AudioClip clipToPlay = audioClips[Random.Range(0, audioClips.Length)];
+            if (clipToPlay == null)
+            {
+                Debug.LogError("Encountered a null AudioClip in the array.");
+                continue; // Skip this iteration if the clip is null
+            }
+
+            // Play the selected audio clip
+            audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f); // Slightly vary the pitch
+            audioSource.PlayOneShot(clipToPlay);
+            yield return new WaitForSeconds(clipToPlay.length + 0.05f); // Wait for the clip to finish plus an interval
         }
 
-        int randomIndex = Random.Range(0, audioClips.Length);
-        AudioClip clipToPlay = audioClips[randomIndex];
-        if (clipToPlay == null)
-        {
-            Debug.LogError($"Null AudioClip at index {randomIndex}");
-            continue; // Skip this iteration if the clip is null
-        }
-
-        audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
-        audioSource.PlayOneShot(clipToPlay);
-        yield return new WaitForSeconds(clipToPlay.length + playbackInterval);
-    }
-    audioSource.pitch = 1.0f; // Reset pitch after playing all clips
+        // Reset the pitch after all clips are played
+        audioSource.pitch = 1.0f;
     }
 }
