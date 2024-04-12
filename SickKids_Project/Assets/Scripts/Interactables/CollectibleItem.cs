@@ -2,19 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Services.CloudSave;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; //broken code, need to fix the disable input
-
 
 public class CollectibleItem : Interactable
 {
-    public string itemName; // Item name to be set in the Unity Editor
+    public string itemName;
     public string itemDescription;
-    
-    public Canvas canvas1; // Assign in the Unity Editor
-    public Canvas canvas2; // Assign in the Unity Editor
-    public Text itemNameText; // Assign in the Unity Editor
-    public Text itemDescriptionText; // Assign in the Unity Editor
-   
+
+    public Canvas canvas1;
+    public Canvas canvas2;
+    public Text itemNameText;
+    public Text itemDescriptionText;
+
+    public TextToAudioPlayer textToAudioPlayer;
+    public TypewriterEffect typewriterEffect;
 
     private Renderer itemRenderer;
     private Material itemMaterial;
@@ -23,7 +23,6 @@ public class CollectibleItem : Interactable
     private PlayerLook playerLook;
     [SerializeField] public int ItemIndex;
     public WhiteBoxManager wb;
-    
 
     void Start()
     {
@@ -32,17 +31,12 @@ public class CollectibleItem : Interactable
         if (player != null)
         {
             playerMotor = player.GetComponent<PlayerMotor>();
-            playerLook = player.GetComponent<PlayerLook>(); 
+            playerLook = player.GetComponent<PlayerLook>();
         }
 
-        if (playerMotor == null)
-        {
-            Debug.LogError("PlayerMotor component not found on the player!");
-        }
         if (itemRenderer != null)
         {
             itemMaterial = itemRenderer.material;
-            // Store the original emission color
             originalEmissionColor = itemMaterial.GetColor("_EmissionColor");
         }
     }
@@ -53,27 +47,17 @@ public class CollectibleItem : Interactable
         {
             wb.canAdvance = true;
         }
-        ReturnToPlay();
         Debug.Log("Collected " + itemName);
-        
 
-        // Save the item name to cloud
         UpdateCollectedItemsInCloud(itemName);
 
-        // Turn off emission to remove the glow
         if (itemMaterial != null)
         {
             itemMaterial.SetColor("_EmissionColor", Color.black);
             DynamicGI.SetEmissive(itemRenderer, Color.black);
         }
-        
-        // Disable player input
-        if (playerMotor != null && playerLook != null)
-        {
-            playerMotor.canMove = false;
-            playerLook.DisableLook();
-        }
 
+        DisablePlayerInput();
         SwitchCanvasAndUpdateText();
     }
 
@@ -114,46 +98,43 @@ public class CollectibleItem : Interactable
             Debug.LogError("Error updating collected items in the cloud: " + ex.Message);
         }
     }
-    
+
+    private void DisablePlayerInput()
+    {
+        if (playerMotor != null) playerMotor.canMove = false;
+        if (playerLook != null) playerLook.DisableLook();
+    }
+
+    private void EnablePlayerInput()
+    {
+        if (playerMotor != null) playerMotor.canMove = true;
+        if (playerLook != null) playerLook.EnableLook();
+    }
+
     private void SwitchCanvasAndUpdateText()
     {
-        if (canvas1 != null)
-        {
-            canvas1.gameObject.SetActive(false);
-        }
+        canvas1.gameObject.SetActive(false);
+        canvas2.gameObject.SetActive(true);
 
-        if (canvas2 != null)
-        {
-            canvas2.gameObject.SetActive(true);
-            itemNameText.text = itemName; // Update item name text
-            itemDescriptionText.text = itemDescription; // Update item description text
-        }
+        itemNameText.text = itemName;
+        itemDescriptionText.text = ""; // Clear existing text for typewriter effect
+
+        if (textToAudioPlayer != null) textToAudioPlayer.ReadText(itemDescription);
+        if (typewriterEffect != null) typewriterEffect.DisplayText(itemDescription); // Trigger typewriter effect
     }
 
     void Update()
     {
-        // Check if the Escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape) )
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnToPlay();
         }
     }
-    
 
-void ReturnToPlay()
-{
-    // Enable Canvas1 and disable Canvas2
-    if (canvas1 != null && canvas2 != null)
+    void ReturnToPlay()
     {
         canvas1.gameObject.SetActive(true);
         canvas2.gameObject.SetActive(false);
-
-        // Re-enable player input
-        if (playerMotor != null && playerLook != null)
-        {
-            playerMotor.canMove = true;
-            playerLook.EnableLook();
-        }
+        EnablePlayerInput();
     }
-}
 }
