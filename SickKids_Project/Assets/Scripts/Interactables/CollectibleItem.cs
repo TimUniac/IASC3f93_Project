@@ -23,6 +23,7 @@ public class CollectibleItem : Interactable
     private PlayerLook playerLook;
     [SerializeField] public int ItemIndex;
     public WhiteBoxManager wb;
+    public Scrollbar scrollViewScrollbar;
 
     void Start()
     {
@@ -136,6 +137,10 @@ public class CollectibleItem : Interactable
     {
         canvas1.gameObject.SetActive(true);
         canvas2.gameObject.SetActive(false);
+        if (scrollViewScrollbar != null)
+        {
+        scrollViewScrollbar.value = 1; 
+        }
         EnablePlayerInput();
     }
 }

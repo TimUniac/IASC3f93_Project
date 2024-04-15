@@ -29,10 +29,53 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 1172050931055031444}
+  - {fileID: -5207234233098154871}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-5207234233098154871
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 243c8bef2835b47b1954c30a6195b939
+  m_EffectName: SFX Reverb
+  m_MixLevel: fb6309599c48247c1b9d40d2272eafe6
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: 0394555824658447da4dcd6099f0e740
+  - m_ParameterName: Room
+    m_GUID: 3e89b6e595b8e426aaf492a25186aba2
+  - m_ParameterName: Room HF
+    m_GUID: dbb54f6414f404900a9c8e5836871ca9
+  - m_ParameterName: Decay Time
+    m_GUID: 20b00fea1f8f6458781ca39ef6527bdc
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: b34acdb981b05436398b71814a9c2aaf
+  - m_ParameterName: Reflections
+    m_GUID: 9ca5bc7e7dfeb4cf580ceda8be020a0b
+  - m_ParameterName: Reflect Delay
+    m_GUID: b6855fade0d814d25a5cce5f325a5ffc
+  - m_ParameterName: Reverb
+    m_GUID: b6111ded5d0cb4f00843a03dec77757e
+  - m_ParameterName: Reverb Delay
+    m_GUID: 1ee9576c462944a86acdf9d54675ac39
+  - m_ParameterName: Diffusion
+    m_GUID: e2ce444ba301244bc9886d1274c2c922
+  - m_ParameterName: Density
+    m_GUID: 7e4c4c581961e4023bb69564a599b63d
+  - m_ParameterName: HF Reference
+    m_GUID: fdb3543a3f0e14e67b70ceb13d8fbe6c
+  - m_ParameterName: Room LF
+    m_GUID: 19809389a184145f494f2a121e75d5df
+  - m_ParameterName: LF Reference
+    m_GUID: 2654503cad1b945b282a26cebb505eff
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-4128731178843932827
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -167,19 +210,24 @@ AudioMixerSnapshotController:
   m_FloatValues:
     d9e08e121ae6041ca96cfaf6c04bff83: 0
     ce9c27e4451234e018f044f1d7153538: 0.0546
-    686902056b5a940d1bfd5dfedded0ee4: -3.8468575
+    686902056b5a940d1bfd5dfedded0ee4: -26.404226
     f58dffa541d0f4218ad2911f164ea23f: -103
+    3e89b6e595b8e426aaf492a25186aba2: -5304
     e483f6d67c4d146bf82354adc369162f: 536
     45c3e627c99cf49a5b823d16d5749166: 0.28
     f2d293c9f2b954279aa0a916f879af18: 1.6
     e6577b5a0298b4a28a3d4f8cc5863d9c: 100
+    20b00fea1f8f6458781ca39ef6527bdc: 2.7
     a100f67b6d12646f0b5ac4c771374f7e: 0.079
+    fe7f4b7bfd3264f59b7bc9086fdc1c53: -40.63421
     ad2d3dabeddf74345ab963630af9954a: -7914
     571ca79cb01a74e48b4ec94c7e90eabc: -345
     dc99217db59f641118753aa4b871607a: 0.802
+    b6855fade0d814d25a5cce5f325a5ffc: 0.043
     46724bcd1efa34803bc898058927a220: 86.2
     4401cdcdf935a4f8a9cb11073304cd63: 4132
     20ebe1ddae27a4f709b904e54d3278dc: 0.31
+    9ca5bc7e7dfeb4cf580ceda8be020a0b: -7896
     bbb57e1fa5a124ba98feb06927b9f131: 0
   m_TransitionOverrides: {}
 --- !u!244 &154014092525497885
