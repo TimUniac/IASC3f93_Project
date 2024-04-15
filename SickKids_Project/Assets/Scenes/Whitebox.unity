@@ -18739,6 +18739,144 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7936395774630359314, guid: 94814d3c01a768e46bca370054054cab, type: 3}
   m_PrefabInstance: {fileID: 504743765}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &506944186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506944191}
+  - component: {fileID: 506944190}
+  - component: {fileID: 506944189}
+  - component: {fileID: 506944188}
+  - component: {fileID: 506944187}
+  m_Layer: 6
+  m_Name: InteractableHardHat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &506944187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506944186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dec7840354d1942b5679f6e188c331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press [E] to learn about this!
+  itemName: Hard Hat
+  itemDescription: "Whoa, sorry for the mess. With Project Horizon underway, there
+    are some major transformations going on. Some of it, like the new Patient Support
+    Centre across the street, involves a lot of construction to provide the facilities
+    to create a more complete environment of care for patients and their families.
+    We want to empower them to be active partners in their care and that means a
+    new approach to what a hospital can look like.  With the new facilities, our
+    staff are better able to perform the kind of research and collaboration that
+    has made Sickkids a leader in paediatric medicine. By pushing the leading edge
+    of precision patient care, Sickkids is able to improve outcomes for kids, not
+    just here, but globally! I think that\u2019s super cool! k\u2026 bye! "
+  canvas1: {fileID: 969564816}
+  canvas2: {fileID: 2091608712}
+  itemNameText: {fileID: 2116603269}
+  itemDescriptionText: {fileID: 2019755834}
+  textToAudioPlayer: {fileID: 1989553433}
+  typewriterEffect: {fileID: 1917482822}
+  ItemIndex: 1
+  wb: {fileID: 810055652}
+--- !u!65 &506944188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506944186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &506944189
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506944186}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &506944190
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506944186}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &506944191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506944186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64.925, y: 21.053, z: -17.49}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &507144359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40473,6 +40611,143 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7936395774630359314, guid: 94814d3c01a768e46bca370054054cab, type: 3}
   m_PrefabInstance: {fileID: 1076879369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1077885626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077885631}
+  - component: {fileID: 1077885630}
+  - component: {fileID: 1077885629}
+  - component: {fileID: 1077885628}
+  - component: {fileID: 1077885627}
+  m_Layer: 6
+  m_Name: InteractableBraveryBeads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1077885627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077885626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dec7840354d1942b5679f6e188c331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press [E] to learn about this!
+  itemName: Bravery Beads
+  itemDescription: "OOoooooo, you\u2019ve found an extremely valuable item. This,
+    is a trophy, awarded to the strongest and bravest among us. Not just a trophy,
+    it is a record of every feat of strength and endurance they have accomplished
+    in their battle against forces that would break a lesser person. These, my friend,
+    are Bravery Beads. Our incredible patients earn them by courageously navigating
+    their care here at Sickkids. It may not seem like a bead on a necklace is all
+    that special, but these are the most precious I\u2019ve ever seen.  I should
+    see that these go back to their owner. And if you want to meet some of our amazing
+    patients, head down Main Street to the Family Centre.  "
+  canvas1: {fileID: 969564816}
+  canvas2: {fileID: 2091608712}
+  itemNameText: {fileID: 2116603269}
+  itemDescriptionText: {fileID: 2019755834}
+  textToAudioPlayer: {fileID: 1989553433}
+  typewriterEffect: {fileID: 1917482822}
+  ItemIndex: 1
+  wb: {fileID: 810055652}
+--- !u!65 &1077885628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077885626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1077885629
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077885626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1077885630
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077885626}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1077885631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077885626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64.925, y: 21.053, z: -15.91}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1079986579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83114,6 +83389,8 @@ SceneRoots:
   - {fileID: 1660116138}
   - {fileID: 2123056948}
   - {fileID: 1337732122}
+  - {fileID: 506944191}
+  - {fileID: 1077885631}
   - {fileID: 358257006}
   - {fileID: 210193866}
   - {fileID: 824465736}
