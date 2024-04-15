@@ -113,6 +113,7 @@ public class CollectibleItem : Interactable
 
     private void SwitchCanvasAndUpdateText()
     {
+        
         canvas1.gameObject.SetActive(false);
         canvas2.gameObject.SetActive(true);
 

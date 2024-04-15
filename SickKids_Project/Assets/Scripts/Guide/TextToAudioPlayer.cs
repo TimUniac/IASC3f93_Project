@@ -38,7 +38,7 @@ public class TextToAudioPlayer : MonoBehaviour
     public void ReadText(string text)
     {
         int charCount = text.Length;
-        int clipsToPlayCount = Mathf.Max(1, Mathf.CeilToInt(charCount / 9.0f)); // Calculate how many clips to play
+        int clipsToPlayCount = Mathf.Max(1, Mathf.CeilToInt(charCount / 7.0f)); // Calculate how many clips to play
         StartCoroutine(PlayAudioClipsRandomly(clipsToPlayCount));
     }
 
