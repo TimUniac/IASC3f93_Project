@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Admin Desk
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b7515b0f0290ea4e91789cebb91e87d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

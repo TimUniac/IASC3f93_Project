@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atrium_SIDE2_WallDecor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c63a1c5daf0f1514d8f77a096fd8ccd2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

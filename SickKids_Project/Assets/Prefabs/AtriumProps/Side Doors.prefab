@@ -56,14 +56,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Side Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726818094815543010, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4953689769783100220, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1e5f9ba989dd1b242a883b3203791971, type: 2}
+    - target: {fileID: 5542328213999254652, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6537071670633309472, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a2a31ed5c74267b4685a26a33e6a3e96, type: 2}
+    - target: {fileID: 7466155880763926566, guid: fdc65a5d015d70f40b9a95609475cbfd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

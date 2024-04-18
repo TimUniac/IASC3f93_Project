@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atrium_Railing_Crook
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9f991c7f3ac55748ba6804a1a12c487, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -64,13 +64,37 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4554aea2e9b81ba4f9253f21152164ea, type: 2}
+    - target: {fileID: -7328346519127419098, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6427956837786915798, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -2769980466458299772, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6d6d6a1c223d06e4096b728f1739bebc, type: 2}
+    - target: {fileID: 318059566821781583, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
       propertyPath: m_Name
       value: Elevator_Revision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 963007063000582479, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904904121962553385, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2780526664153113823, guid: bac9a24f815c3794cb5dbe48bdf0cb8b, type: 3}
       propertyPath: m_Materials.Array.data[0]

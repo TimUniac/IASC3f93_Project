@@ -48,10 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -7918335002988649766, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6dad5d28111ad314c92b2705e6647b18, type: 2}
+    - target: {fileID: -7029948723529949830, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -59,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
       propertyPath: m_Name
       value: Long flower bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: 40bcb3cb33064914ba488510dd719d2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
