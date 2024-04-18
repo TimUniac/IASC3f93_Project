@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -735686097191737500, guid: f90c92645066d4541acfe4ea1c0972bc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e6d92d6e27c28444ba650435f94f481, type: 2}
     - target: {fileID: 919132149155446097, guid: f90c92645066d4541acfe4ea1c0972bc, type: 3}
       propertyPath: m_Name
       value: Wall Lights02
