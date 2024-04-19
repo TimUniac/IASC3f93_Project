@@ -10,6 +10,8 @@ public class CollectibleItem : Interactable
     public string itemName; // Item name to be set in the Unity Editor
     public string itemDescription;
     
+     public TextToAudioPlayer textToAudioPlayer;
+
     public Canvas canvas1; // Assign in the Unity Editor
     public Canvas canvas2; // Assign in the Unity Editor
     public Text itemNameText; // Assign in the Unity Editor
@@ -51,6 +53,9 @@ public class CollectibleItem : Interactable
 
     protected override void Interact()
     {
+        
+        base.Interact();
+        textToAudioPlayer.ReadText(itemDescription);
         
         if (hasInteracted)
         {
